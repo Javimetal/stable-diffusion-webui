@@ -380,8 +380,8 @@ def create_seed_inputs():
 
     with gr.Row(visible=False) as seed_extra_row_2:
         seed_extras.append(seed_extra_row_2)
-        seed_resize_from_w = gr.Slider(minimum=0, maximum=2048, step=64, label="Resize seed from width", value=0)
-        seed_resize_from_h = gr.Slider(minimum=0, maximum=2048, step=64, label="Resize seed from height", value=0)
+        seed_resize_from_w = gr.Slider(minimum=0, maximum=3840, step=64, label="Resize seed from width", value=0)
+        seed_resize_from_h = gr.Slider(minimum=0, maximum=2160, step=64, label="Resize seed from height", value=0)
 
     random_seed.click(fn=lambda: -1, show_progress=False, inputs=[], outputs=[seed])
     random_subseed.click(fn=lambda: -1, show_progress=False, inputs=[], outputs=[subseed])
